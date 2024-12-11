@@ -1,7 +1,7 @@
 import 'package:camera/camera.dart';
-import 'package:face_detection_app/home.dart';
+import 'package:face_detection_app/view/check_emp_id_screen.dart';
+import 'package:face_detection_app/view/enum_screen.dart';
 import 'package:flutter/material.dart';
-import 'face_detection_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: const FaceAttendanceScreen(
+        action: CameraAction.login,
+      )
     );
   }
 }
